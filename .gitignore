@@ -1,0 +1,13 @@
+# Local database
+*.db
+
+# Raw data
+data/
+
+# Temporary / practice files
+*練習*
+用Python寫SQL*
+
+# Python cache
+__pycache__/
+*.pyc
