@@ -9,7 +9,12 @@ DB_PATH = Path("olist_ecommerce.db")
 #sql/02_category_revenue.sql
 #sql/03_mom_growth.sql
 #sql/04_aov_analysis.sql
-SQL_PATH = Path("sql/04_aov_analysis.sql")
+#sql/05_customer_first_purchase.sql
+#06_repeat_customer_rate.sql
+#07_new_vs_repeat_customers_by_month.sql
+#08_customer_retention_rate.sql
+#09_cohort_retention_matrix.sql
+SQL_PATH = Path("sql/09_cohort_retention_matrix.sql")
 
 def main() -> None:
     query = SQL_PATH.read_text(encoding="utf-8")
