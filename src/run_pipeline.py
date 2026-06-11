@@ -1,5 +1,6 @@
 import logging
 import os
+from pathlib import Path
 
 from build_analytics import build_analytics_table
 from extract import extract_data
@@ -48,6 +49,7 @@ TABLE_CONFIGS = [
    },
 ]
 
+Path("logs").mkdir(exist_ok=True)
 
 logging.basicConfig(
     filename="logs/pipeline.log",
