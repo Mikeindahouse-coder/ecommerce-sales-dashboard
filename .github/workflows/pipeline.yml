@@ -1,0 +1,32 @@
+name: ETL Pipeline Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-pipeline:
+
+    runs-on: ubuntu-latest
+
+    env:
+      DATA_MODE: sample
+
+    steps:
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run Pipeline
+        run: |
+          python src/run_pipeline.py
